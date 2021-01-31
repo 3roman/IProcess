@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Project>
+
+  <Import Project="$(MSBuildProjectDirectory)\xlwInterfaceDef.props"/>
+  
+  <PropertyGroup>
+    <xlwPkgBuildDir>$(MSBuildThisFileDirectory)</xlwPkgBuildDir>
+    <_XLW2704_>$(MSBuildThisFileDirectory)..\</_XLW2704_>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ForceImportAfterCppProps Condition="Exists('$(MSBuildThisFileDirectory)xlw.Cpp.props')">$(MSBuildThisFileDirectory)xlw.Cpp.props;$(ForceImportAfterCppProps)</ForceImportAfterCppProps>
+    <ForceImportAfterCppTargets Condition="Exists('$(MSBuildThisFileDirectory)xlw.Cpp.targets')">$(MSBuildThisFileDirectory)xlw.Cpp.targets;$(ForceImportAfterCppTargets)</ForceImportAfterCppTargets>
+  </PropertyGroup>
+
+</Project>
