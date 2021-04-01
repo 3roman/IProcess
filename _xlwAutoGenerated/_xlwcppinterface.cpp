@@ -27,7 +27,7 @@ namespace
 XLRegistration::Arg
 P_HGArgs[]=
 {
-{ "P","too lazy to comment this one ","B"}
+{ "p","too lazy to comment this one ","B"}
 };
   XLRegistration::XLFunctionRegistrationHelper
 registerP_HG("xlP_HG",
@@ -52,7 +52,7 @@ extern "C"
 {
 LPXLFOPER EXCEL_EXPORT
 xlP_HG(
-double P)
+double p)
 {
 EXCEL_BEGIN;
 
@@ -62,7 +62,7 @@ EXCEL_BEGIN;
 
 double result(
 	P_HG(
-		P)
+		p)
 	);
 return XlfOper(result);
 EXCEL_END
@@ -78,7 +78,7 @@ namespace
 XLRegistration::Arg
 P_HLArgs[]=
 {
-{ "P","too lazy to comment this one ","B"}
+{ "p","too lazy to comment this one ","B"}
 };
   XLRegistration::XLFunctionRegistrationHelper
 registerP_HL("xlP_HL",
@@ -103,7 +103,7 @@ extern "C"
 {
 LPXLFOPER EXCEL_EXPORT
 xlP_HL(
-double P)
+double p)
 {
 EXCEL_BEGIN;
 
@@ -113,7 +113,7 @@ EXCEL_BEGIN;
 
 double result(
 	P_HL(
-		P)
+		p)
 	);
 return XlfOper(result);
 EXCEL_END
@@ -129,7 +129,7 @@ namespace
 XLRegistration::Arg
 P_SGArgs[]=
 {
-{ "P","too lazy to comment this one ","B"}
+{ "p","too lazy to comment this one ","B"}
 };
   XLRegistration::XLFunctionRegistrationHelper
 registerP_SG("xlP_SG",
@@ -154,7 +154,7 @@ extern "C"
 {
 LPXLFOPER EXCEL_EXPORT
 xlP_SG(
-double P)
+double p)
 {
 EXCEL_BEGIN;
 
@@ -164,7 +164,7 @@ EXCEL_BEGIN;
 
 double result(
 	P_SG(
-		P)
+		p)
 	);
 return XlfOper(result);
 EXCEL_END
@@ -180,7 +180,7 @@ namespace
 XLRegistration::Arg
 P_SLArgs[]=
 {
-{ "P","too lazy to comment this one ","B"}
+{ "p","too lazy to comment this one ","B"}
 };
   XLRegistration::XLFunctionRegistrationHelper
 registerP_SL("xlP_SL",
@@ -205,7 +205,7 @@ extern "C"
 {
 LPXLFOPER EXCEL_EXPORT
 xlP_SL(
-double P)
+double p)
 {
 EXCEL_BEGIN;
 
@@ -215,7 +215,7 @@ EXCEL_BEGIN;
 
 double result(
 	P_SL(
-		P)
+		p)
 	);
 return XlfOper(result);
 EXCEL_END
@@ -231,7 +231,7 @@ namespace
 XLRegistration::Arg
 P_TArgs[]=
 {
-{ "P","too lazy to comment this one ","B"}
+{ "p","too lazy to comment this one ","B"}
 };
   XLRegistration::XLFunctionRegistrationHelper
 registerP_T("xlP_T",
@@ -256,7 +256,7 @@ extern "C"
 {
 LPXLFOPER EXCEL_EXPORT
 xlP_T(
-double P)
+double p)
 {
 EXCEL_BEGIN;
 
@@ -266,7 +266,7 @@ EXCEL_BEGIN;
 
 double result(
 	P_T(
-		P)
+		p)
 	);
 return XlfOper(result);
 EXCEL_END
@@ -282,7 +282,7 @@ namespace
 XLRegistration::Arg
 P_VGArgs[]=
 {
-{ "P","too lazy to comment this one ","B"}
+{ "p","too lazy to comment this one ","B"}
 };
   XLRegistration::XLFunctionRegistrationHelper
 registerP_VG("xlP_VG",
@@ -307,7 +307,7 @@ extern "C"
 {
 LPXLFOPER EXCEL_EXPORT
 xlP_VG(
-double P)
+double p)
 {
 EXCEL_BEGIN;
 
@@ -317,7 +317,7 @@ EXCEL_BEGIN;
 
 double result(
 	P_VG(
-		P)
+		p)
 	);
 return XlfOper(result);
 EXCEL_END
@@ -333,7 +333,7 @@ namespace
 XLRegistration::Arg
 P_VLArgs[]=
 {
-{ "P","too lazy to comment this one ","B"}
+{ "p","too lazy to comment this one ","B"}
 };
   XLRegistration::XLFunctionRegistrationHelper
 registerP_VL("xlP_VL",
@@ -358,7 +358,7 @@ extern "C"
 {
 LPXLFOPER EXCEL_EXPORT
 xlP_VL(
-double P)
+double p)
 {
 EXCEL_BEGIN;
 
@@ -368,7 +368,109 @@ EXCEL_BEGIN;
 
 double result(
 	P_VL(
-		P)
+		p)
+	);
+return XlfOper(result);
+EXCEL_END
+}
+}
+
+
+
+//////////////////////////
+
+namespace
+{
+XLRegistration::Arg
+P_ETAGArgs[]=
+{
+{ "p","too lazy to comment this one ","B"}
+};
+  XLRegistration::XLFunctionRegistrationHelper
+registerP_ETAG("xlP_ETAG",
+"P_ETAG",
+"too lazy to comment this function ",
+LibraryName,
+P_ETAGArgs,
+1
+,false
+,false
+,""
+,""
+,false
+,false
+,false
+);
+}
+
+
+
+extern "C"
+{
+LPXLFOPER EXCEL_EXPORT
+xlP_ETAG(
+double p)
+{
+EXCEL_BEGIN;
+
+	if (XlfExcel::Instance().IsCalledByFuncWiz())
+		return XlfOper(true);
+
+
+double result(
+	P_ETAG(
+		p)
+	);
+return XlfOper(result);
+EXCEL_END
+}
+}
+
+
+
+//////////////////////////
+
+namespace
+{
+XLRegistration::Arg
+P_ETALArgs[]=
+{
+{ "p","too lazy to comment this one ","B"}
+};
+  XLRegistration::XLFunctionRegistrationHelper
+registerP_ETAL("xlP_ETAL",
+"P_ETAL",
+"too lazy to comment this function ",
+LibraryName,
+P_ETALArgs,
+1
+,false
+,false
+,""
+,""
+,false
+,false
+,false
+);
+}
+
+
+
+extern "C"
+{
+LPXLFOPER EXCEL_EXPORT
+xlP_ETAL(
+double p)
+{
+EXCEL_BEGIN;
+
+	if (XlfExcel::Instance().IsCalledByFuncWiz())
+		return XlfOper(true);
+
+
+double result(
+	P_ETAL(
+		p)
 	);
 return XlfOper(result);
 EXCEL_END
@@ -384,8 +486,8 @@ namespace
 XLRegistration::Arg
 PH_SArgs[]=
 {
-{ "P","too lazy to comment this one ","B"},
-{ "H","too lazy to comment this one ","B"}
+{ "p","too lazy to comment this one ","B"},
+{ "h","too lazy to comment this one ","B"}
 };
   XLRegistration::XLFunctionRegistrationHelper
 registerPH_S("xlPH_S",
@@ -410,8 +512,8 @@ extern "C"
 {
 LPXLFOPER EXCEL_EXPORT
 xlPH_S(
-double P,
-double H)
+double p,
+double h)
 {
 EXCEL_BEGIN;
 
@@ -422,8 +524,8 @@ EXCEL_BEGIN;
 
 double result(
 	PH_S(
-		P,
-		H)
+		p,
+		h)
 	);
 return XlfOper(result);
 EXCEL_END
@@ -439,8 +541,8 @@ namespace
 XLRegistration::Arg
 PH_TArgs[]=
 {
-{ "P","too lazy to comment this one ","B"},
-{ "H","too lazy to comment this one ","B"}
+{ "p","too lazy to comment this one ","B"},
+{ "h","too lazy to comment this one ","B"}
 };
   XLRegistration::XLFunctionRegistrationHelper
 registerPH_T("xlPH_T",
@@ -465,8 +567,8 @@ extern "C"
 {
 LPXLFOPER EXCEL_EXPORT
 xlPH_T(
-double P,
-double H)
+double p,
+double h)
 {
 EXCEL_BEGIN;
 
@@ -477,8 +579,8 @@ EXCEL_BEGIN;
 
 double result(
 	PH_T(
-		P,
-		H)
+		p,
+		h)
 	);
 return XlfOper(result);
 EXCEL_END
@@ -494,8 +596,8 @@ namespace
 XLRegistration::Arg
 PH_VArgs[]=
 {
-{ "P","too lazy to comment this one ","B"},
-{ "H","too lazy to comment this one ","B"}
+{ "p","too lazy to comment this one ","B"},
+{ "h","too lazy to comment this one ","B"}
 };
   XLRegistration::XLFunctionRegistrationHelper
 registerPH_V("xlPH_V",
@@ -520,8 +622,8 @@ extern "C"
 {
 LPXLFOPER EXCEL_EXPORT
 xlPH_V(
-double P,
-double H)
+double p,
+double h)
 {
 EXCEL_BEGIN;
 
@@ -532,8 +634,8 @@ EXCEL_BEGIN;
 
 double result(
 	PH_V(
-		P,
-		H)
+		p,
+		h)
 	);
 return XlfOper(result);
 EXCEL_END
@@ -549,8 +651,8 @@ namespace
 XLRegistration::Arg
 PS_HArgs[]=
 {
-{ "P","too lazy to comment this one ","B"},
-{ "S","too lazy to comment this one ","B"}
+{ "p","too lazy to comment this one ","B"},
+{ "s","too lazy to comment this one ","B"}
 };
   XLRegistration::XLFunctionRegistrationHelper
 registerPS_H("xlPS_H",
@@ -575,8 +677,8 @@ extern "C"
 {
 LPXLFOPER EXCEL_EXPORT
 xlPS_H(
-double P,
-double S)
+double p,
+double s)
 {
 EXCEL_BEGIN;
 
@@ -587,8 +689,8 @@ EXCEL_BEGIN;
 
 double result(
 	PS_H(
-		P,
-		S)
+		p,
+		s)
 	);
 return XlfOper(result);
 EXCEL_END
@@ -604,8 +706,8 @@ namespace
 XLRegistration::Arg
 PS_TArgs[]=
 {
-{ "P","too lazy to comment this one ","B"},
-{ "S","too lazy to comment this one ","B"}
+{ "p","too lazy to comment this one ","B"},
+{ "s","too lazy to comment this one ","B"}
 };
   XLRegistration::XLFunctionRegistrationHelper
 registerPS_T("xlPS_T",
@@ -630,8 +732,8 @@ extern "C"
 {
 LPXLFOPER EXCEL_EXPORT
 xlPS_T(
-double P,
-double S)
+double p,
+double s)
 {
 EXCEL_BEGIN;
 
@@ -642,8 +744,8 @@ EXCEL_BEGIN;
 
 double result(
 	PS_T(
-		P,
-		S)
+		p,
+		s)
 	);
 return XlfOper(result);
 EXCEL_END
@@ -659,8 +761,8 @@ namespace
 XLRegistration::Arg
 PS_VArgs[]=
 {
-{ "P","too lazy to comment this one ","B"},
-{ "S","too lazy to comment this one ","B"}
+{ "p","too lazy to comment this one ","B"},
+{ "s","too lazy to comment this one ","B"}
 };
   XLRegistration::XLFunctionRegistrationHelper
 registerPS_V("xlPS_V",
@@ -685,8 +787,8 @@ extern "C"
 {
 LPXLFOPER EXCEL_EXPORT
 xlPS_V(
-double P,
-double S)
+double p,
+double s)
 {
 EXCEL_BEGIN;
 
@@ -697,8 +799,8 @@ EXCEL_BEGIN;
 
 double result(
 	PS_V(
-		P,
-		S)
+		p,
+		s)
 	);
 return XlfOper(result);
 EXCEL_END
@@ -714,8 +816,8 @@ namespace
 XLRegistration::Arg
 PT_HArgs[]=
 {
-{ "P","too lazy to comment this one ","B"},
-{ "T","too lazy to comment this one ","B"}
+{ "p","too lazy to comment this one ","B"},
+{ "t","too lazy to comment this one ","B"}
 };
   XLRegistration::XLFunctionRegistrationHelper
 registerPT_H("xlPT_H",
@@ -740,8 +842,8 @@ extern "C"
 {
 LPXLFOPER EXCEL_EXPORT
 xlPT_H(
-double P,
-double T)
+double p,
+double t)
 {
 EXCEL_BEGIN;
 
@@ -752,8 +854,8 @@ EXCEL_BEGIN;
 
 double result(
 	PT_H(
-		P,
-		T)
+		p,
+		t)
 	);
 return XlfOper(result);
 EXCEL_END
@@ -769,8 +871,8 @@ namespace
 XLRegistration::Arg
 PT_SArgs[]=
 {
-{ "P","too lazy to comment this one ","B"},
-{ "T","too lazy to comment this one ","B"}
+{ "p","too lazy to comment this one ","B"},
+{ "t","too lazy to comment this one ","B"}
 };
   XLRegistration::XLFunctionRegistrationHelper
 registerPT_S("xlPT_S",
@@ -795,8 +897,8 @@ extern "C"
 {
 LPXLFOPER EXCEL_EXPORT
 xlPT_S(
-double P,
-double T)
+double p,
+double t)
 {
 EXCEL_BEGIN;
 
@@ -807,8 +909,8 @@ EXCEL_BEGIN;
 
 double result(
 	PT_S(
-		P,
-		T)
+		p,
+		t)
 	);
 return XlfOper(result);
 EXCEL_END
@@ -824,8 +926,8 @@ namespace
 XLRegistration::Arg
 PT_VArgs[]=
 {
-{ "P","too lazy to comment this one ","B"},
-{ "T","too lazy to comment this one ","B"}
+{ "p","too lazy to comment this one ","B"},
+{ "t","too lazy to comment this one ","B"}
 };
   XLRegistration::XLFunctionRegistrationHelper
 registerPT_V("xlPT_V",
@@ -850,8 +952,8 @@ extern "C"
 {
 LPXLFOPER EXCEL_EXPORT
 xlPT_V(
-double P,
-double T)
+double p,
+double t)
 {
 EXCEL_BEGIN;
 
@@ -862,8 +964,63 @@ EXCEL_BEGIN;
 
 double result(
 	PT_V(
-		P,
-		T)
+		p,
+		t)
+	);
+return XlfOper(result);
+EXCEL_END
+}
+}
+
+
+
+//////////////////////////
+
+namespace
+{
+XLRegistration::Arg
+PT_ETAArgs[]=
+{
+{ "p","too lazy to comment this one ","B"},
+{ "t","too lazy to comment this one ","B"}
+};
+  XLRegistration::XLFunctionRegistrationHelper
+registerPT_ETA("xlPT_ETA",
+"PT_ETA",
+"too lazy to comment this function ",
+LibraryName,
+PT_ETAArgs,
+2
+,false
+,false
+,""
+,""
+,false
+,false
+,false
+);
+}
+
+
+
+extern "C"
+{
+LPXLFOPER EXCEL_EXPORT
+xlPT_ETA(
+double p,
+double t)
+{
+EXCEL_BEGIN;
+
+	if (XlfExcel::Instance().IsCalledByFuncWiz())
+		return XlfOper(true);
+
+
+
+double result(
+	PT_ETA(
+		p,
+		t)
 	);
 return XlfOper(result);
 EXCEL_END
@@ -879,7 +1036,7 @@ namespace
 XLRegistration::Arg
 T_HGArgs[]=
 {
-{ "T","too lazy to comment this one ","B"}
+{ "t","too lazy to comment this one ","B"}
 };
   XLRegistration::XLFunctionRegistrationHelper
 registerT_HG("xlT_HG",
@@ -904,7 +1061,7 @@ extern "C"
 {
 LPXLFOPER EXCEL_EXPORT
 xlT_HG(
-double T)
+double t)
 {
 EXCEL_BEGIN;
 
@@ -914,7 +1071,7 @@ EXCEL_BEGIN;
 
 double result(
 	T_HG(
-		T)
+		t)
 	);
 return XlfOper(result);
 EXCEL_END
@@ -930,7 +1087,7 @@ namespace
 XLRegistration::Arg
 T_HLArgs[]=
 {
-{ "T","too lazy to comment this one ","B"}
+{ "t","too lazy to comment this one ","B"}
 };
   XLRegistration::XLFunctionRegistrationHelper
 registerT_HL("xlT_HL",
@@ -955,7 +1112,7 @@ extern "C"
 {
 LPXLFOPER EXCEL_EXPORT
 xlT_HL(
-double T)
+double t)
 {
 EXCEL_BEGIN;
 
@@ -965,7 +1122,7 @@ EXCEL_BEGIN;
 
 double result(
 	T_HL(
-		T)
+		t)
 	);
 return XlfOper(result);
 EXCEL_END
@@ -981,7 +1138,7 @@ namespace
 XLRegistration::Arg
 T_PArgs[]=
 {
-{ "T","too lazy to comment this one ","B"}
+{ "t","too lazy to comment this one ","B"}
 };
   XLRegistration::XLFunctionRegistrationHelper
 registerT_P("xlT_P",
@@ -1006,7 +1163,7 @@ extern "C"
 {
 LPXLFOPER EXCEL_EXPORT
 xlT_P(
-double T)
+double t)
 {
 EXCEL_BEGIN;
 
@@ -1016,7 +1173,7 @@ EXCEL_BEGIN;
 
 double result(
 	T_P(
-		T)
+		t)
 	);
 return XlfOper(result);
 EXCEL_END
@@ -1032,7 +1189,7 @@ namespace
 XLRegistration::Arg
 T_SGArgs[]=
 {
-{ "T","too lazy to comment this one ","B"}
+{ "t","too lazy to comment this one ","B"}
 };
   XLRegistration::XLFunctionRegistrationHelper
 registerT_SG("xlT_SG",
@@ -1057,7 +1214,7 @@ extern "C"
 {
 LPXLFOPER EXCEL_EXPORT
 xlT_SG(
-double T)
+double t)
 {
 EXCEL_BEGIN;
 
@@ -1067,7 +1224,7 @@ EXCEL_BEGIN;
 
 double result(
 	T_SG(
-		T)
+		t)
 	);
 return XlfOper(result);
 EXCEL_END
@@ -1083,7 +1240,7 @@ namespace
 XLRegistration::Arg
 T_SLArgs[]=
 {
-{ "T","too lazy to comment this one ","B"}
+{ "t","too lazy to comment this one ","B"}
 };
   XLRegistration::XLFunctionRegistrationHelper
 registerT_SL("xlT_SL",
@@ -1108,7 +1265,7 @@ extern "C"
 {
 LPXLFOPER EXCEL_EXPORT
 xlT_SL(
-double T)
+double t)
 {
 EXCEL_BEGIN;
 
@@ -1118,7 +1275,7 @@ EXCEL_BEGIN;
 
 double result(
 	T_SL(
-		T)
+		t)
 	);
 return XlfOper(result);
 EXCEL_END
@@ -1134,7 +1291,7 @@ namespace
 XLRegistration::Arg
 T_VGArgs[]=
 {
-{ "T","too lazy to comment this one ","B"}
+{ "t","too lazy to comment this one ","B"}
 };
   XLRegistration::XLFunctionRegistrationHelper
 registerT_VG("xlT_VG",
@@ -1159,7 +1316,7 @@ extern "C"
 {
 LPXLFOPER EXCEL_EXPORT
 xlT_VG(
-double T)
+double t)
 {
 EXCEL_BEGIN;
 
@@ -1169,7 +1326,7 @@ EXCEL_BEGIN;
 
 double result(
 	T_VG(
-		T)
+		t)
 	);
 return XlfOper(result);
 EXCEL_END
@@ -1185,7 +1342,7 @@ namespace
 XLRegistration::Arg
 T_VLArgs[]=
 {
-{ "T","too lazy to comment this one ","B"}
+{ "t","too lazy to comment this one ","B"}
 };
   XLRegistration::XLFunctionRegistrationHelper
 registerT_VL("xlT_VL",
@@ -1210,7 +1367,7 @@ extern "C"
 {
 LPXLFOPER EXCEL_EXPORT
 xlT_VL(
-double T)
+double t)
 {
 EXCEL_BEGIN;
 
@@ -1220,7 +1377,109 @@ EXCEL_BEGIN;
 
 double result(
 	T_VL(
-		T)
+		t)
+	);
+return XlfOper(result);
+EXCEL_END
+}
+}
+
+
+
+//////////////////////////
+
+namespace
+{
+XLRegistration::Arg
+T_ETAGArgs[]=
+{
+{ "t","too lazy to comment this one ","B"}
+};
+  XLRegistration::XLFunctionRegistrationHelper
+registerT_ETAG("xlT_ETAG",
+"T_ETAG",
+"too lazy to comment this function ",
+LibraryName,
+T_ETAGArgs,
+1
+,false
+,false
+,""
+,""
+,false
+,false
+,false
+);
+}
+
+
+
+extern "C"
+{
+LPXLFOPER EXCEL_EXPORT
+xlT_ETAG(
+double t)
+{
+EXCEL_BEGIN;
+
+	if (XlfExcel::Instance().IsCalledByFuncWiz())
+		return XlfOper(true);
+
+
+double result(
+	T_ETAG(
+		t)
+	);
+return XlfOper(result);
+EXCEL_END
+}
+}
+
+
+
+//////////////////////////
+
+namespace
+{
+XLRegistration::Arg
+T_ETALArgs[]=
+{
+{ "t","too lazy to comment this one ","B"}
+};
+  XLRegistration::XLFunctionRegistrationHelper
+registerT_ETAL("xlT_ETAL",
+"T_ETAL",
+"too lazy to comment this function ",
+LibraryName,
+T_ETALArgs,
+1
+,false
+,false
+,""
+,""
+,false
+,false
+,false
+);
+}
+
+
+
+extern "C"
+{
+LPXLFOPER EXCEL_EXPORT
+xlT_ETAL(
+double t)
+{
+EXCEL_BEGIN;
+
+	if (XlfExcel::Instance().IsCalledByFuncWiz())
+		return XlfOper(true);
+
+
+double result(
+	T_ETAL(
+		t)
 	);
 return XlfOper(result);
 EXCEL_END
