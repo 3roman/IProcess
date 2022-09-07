@@ -11,7 +11,7 @@ steamRateOfSingleStageTurbine(
     double inletPressure, // MPaA
     double inletTemperature, // oC
     double exhaustPressure, // MPaA
-    double efficiency // 0~1
+    double efficiency // 0~100
     );
 
 double // oC
@@ -19,7 +19,7 @@ exhaustTemperatureOfSingleStageTurbine(
     double inletPressure, // MPaA
     double inletTemperature, // oC
     double exhaustPressure, // MPaA
-    double efficiency // 0~1
+    double efficiency // 0~100
 );
 
 double // 0~1
@@ -27,5 +27,5 @@ exhaustDrynessOfSingleStageTurbine(
     double inletPressure, // MPaA
     double inletTemperature, // oC
     double exhaustPressure, // MPaA
-    double efficiency // 0~1
+    double efficiency // 0~100
 );

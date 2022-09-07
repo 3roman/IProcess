@@ -1,3 +1,5 @@
+#include "iapws97.h"
+
 double kcal2kj(double kcal)
 {
 	return kcal * 4.1816;
@@ -8,9 +10,9 @@ double Qgr_ar2Qnet_ar(double Qgr_ar, double Har, double Mt)
 	return Qgr_ar - 226.1 * Har - 25.1 * Mt;
 }
 
-double adBase2arBase(double Mar, double Mad)
+double adBase2arBase(double Mt, double Mad)
 {
-	return (100 - Mar) / (100 - Mad);
+	return (100 - Mt) / (100 - Mad);
 }
 
 double adBase2dBase(double Mad)
@@ -23,19 +25,19 @@ double adBase2dafBase(double Aad, double Mad)
 	return 100 / (100 - Mad - Aad);
 }
 
-double arBase2adBase(double Mad, double Mar)
+double arBase2adBase(double Mad, double Mt)
 {
-	return (100 - Mad) / (100 - Mar);
+	return (100 - Mad) / (100 - Mt);
 }
 
-double arBase2dBase(double Mar)
+double arBase2dBase(double Mt)
 {
-	return 100 / (100 - Mar);
+	return 100 / (100 - Mt);
 }
 
-double arBase2dafBase(double Aar, double Mar)
+double arBase2dafBase(double Aar, double Mt)
 {
-	return 100 / (100 - Mar - Aar);
+	return 100 / (100 - Mt - Aar);
 }
 
 double dBase2adBase(double Mad)
@@ -43,9 +45,9 @@ double dBase2adBase(double Mad)
 	return (100 - Mad) / 100;
 }
 
-double dBase2arBase(double Mar)
+double dBase2arBase(double Mt)
 {
-	return (100 - Mar) / 100;
+	return (100 - Mt) / 100;
 }
 
 double dBase2dafBase(double Ad)
@@ -59,9 +61,9 @@ double dafBase2adBase(double Mad, double Aad)
 	return (100 - Mad - Aad) / 100;
 }
 
-double dafBase2arBase(double Mar, double Aar)
+double dafBase2arBase(double Mt, double Aar)
 {
-	return (100 - Mar - Aar) / 100;
+	return (100 - Mt - Aar) / 100;
 }
 
 double dafBase2dBase(double Ad)

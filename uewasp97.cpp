@@ -1031,7 +1031,7 @@ namespace uewasp97
 	void SubRangeByP(double  Pressure, int* SubRange);
 
 	/////////////////////////////////////////////05 4.22 23:35 ¸Ä
-	double GammaReg1(double Tau, double Pi)
+	double GamMteg1(double Tau, double Pi)
 	{
 		int  I;
 		double  Result;
@@ -1180,7 +1180,7 @@ namespace uewasp97
 		return  0;
 	}
 
-	double GammarReg2(double Tau, double Pi)
+	double GamMtReg2(double Tau, double Pi)
 	{
 		int  I;
 		double  Result;
@@ -1191,7 +1191,7 @@ namespace uewasp97
 		return Result;
 	}
 
-	double GammarPiReg2(double Tau, double Pi)
+	double GamMtPiReg2(double Tau, double Pi)
 	{
 		int  I;
 		double  Result;
@@ -1202,7 +1202,7 @@ namespace uewasp97
 		return Result;
 	}
 
-	double GammarPiPiReg2(double Tau, double Pi)
+	double GamMtPiPiReg2(double Tau, double Pi)
 	{
 		int  I;
 		double  Result;
@@ -1213,7 +1213,7 @@ namespace uewasp97
 		return Result;
 	}
 
-	double GammarTauReg2(double Tau, double Pi)
+	double GamMtTauReg2(double Tau, double Pi)
 	{
 		int  I;
 		double  Result;
@@ -1224,7 +1224,7 @@ namespace uewasp97
 		return Result;
 	}
 
-	double GammarTauTauReg2(double Tau, double Pi)
+	double GamMtTauTauReg2(double Tau, double Pi)
 	{
 		int  I;
 		double  Result;
@@ -1235,7 +1235,7 @@ namespace uewasp97
 		return Result;
 	}
 
-	double GammarPiTauReg2(double Tau, double Pi)
+	double GamMtPiTauReg2(double Tau, double Pi)
 	{
 		int  I;
 		double  Result;
@@ -1470,7 +1470,7 @@ namespace uewasp97
 		return  0;
 	}
 
-	double GammarReg5(double Tau, double Pi)
+	double GamMtReg5(double Tau, double Pi)
 	{
 		int  I;
 		double  Result;
@@ -1481,7 +1481,7 @@ namespace uewasp97
 		return Result;
 	}
 
-	double GammarPiReg5(double Tau, double Pi)
+	double GamMtPiReg5(double Tau, double Pi)
 	{
 		int  I;
 		double  Result;
@@ -1492,7 +1492,7 @@ namespace uewasp97
 		return Result;
 	}
 
-	double GammarPiPiReg5(double Tau, double Pi)
+	double GamMtPiPiReg5(double Tau, double Pi)
 	{
 		int  I;
 		double  Result;
@@ -1504,7 +1504,7 @@ namespace uewasp97
 	}
 
 
-	double GammarTauReg5(double Tau, double Pi)
+	double GamMtTauReg5(double Tau, double Pi)
 	{
 		int  I;
 		double  Result;
@@ -1516,7 +1516,7 @@ namespace uewasp97
 	}
 
 
-	double GammarTauTauReg5(double Tau, double Pi)
+	double GamMtTauTauReg5(double Tau, double Pi)
 	{
 		int  I;
 		double  Result;
@@ -1527,7 +1527,7 @@ namespace uewasp97
 		return Result;
 	}
 
-	double GammarPiTauReg5(double Tau, double Pi)
+	double GamMtPiTauReg5(double Tau, double Pi)
 	{
 		int  I;
 		double  Result;
@@ -1586,8 +1586,8 @@ namespace uewasp97
 		{
 			taus = 540.0 / Temperature;
 			pis = Pressure / 10.0;
-			dpidTau = (647.226 * 10.0 * ((Gamma0PiTauReg2(taus, pis) + GammarPiTauReg2(taus, pis)) * 540.0 - (Gamma0PiReg2(taus, pis) + GammarPiReg2(taus, pis)) * Temperature)) / (221.15 * Temperature * Temperature * (Gamma0PiPiReg2(taus, pis) + GammarPiPiReg2(taus, pis)));
-			ddeltadpi = -(22115000.0 * (Gamma0PiPiReg2(taus, pis) + GammarPiPiReg2(taus, pis))) / (317.763 * RGas_Water * Temperature * pow((Gamma0PiReg2(taus, pis) + GammarPiReg2(taus, pis)), 2));
+			dpidTau = (647.226 * 10.0 * ((Gamma0PiTauReg2(taus, pis) + GamMtPiTauReg2(taus, pis)) * 540.0 - (Gamma0PiReg2(taus, pis) + GamMtPiReg2(taus, pis)) * Temperature)) / (221.15 * Temperature * Temperature * (Gamma0PiPiReg2(taus, pis) + GamMtPiPiReg2(taus, pis)));
+			ddeltadpi = -(22115000.0 * (Gamma0PiPiReg2(taus, pis) + GamMtPiPiReg2(taus, pis))) / (317.763 * RGas_Water * Temperature * pow((Gamma0PiReg2(taus, pis) + GamMtPiReg2(taus, pis)), 2));
 		}
 		else if ((Temperature >= T350C) && (Temperature <= P2TBound23(Pressure)) && (Pressure >= T2PBound23(Temperature)) && (Pressure <= 1000.0))
 		{
@@ -1990,7 +1990,7 @@ namespace uewasp97
 
 		Tau = 1386.0 / Temperature;
 		Pi = (0.1 * Pressure) / 16.53;
-		return  0.001 * RGas_Water * (Tau * GammaTauReg1(Tau, Pi) - GammaReg1(Tau, Pi));
+		return  0.001 * RGas_Water * (Tau * GammaTauReg1(Tau, Pi) - GamMteg1(Tau, Pi));
 	}
 
 
@@ -2152,7 +2152,7 @@ namespace uewasp97
 
 		Tau = 540.0 / Temperature;
 		Pi = 0.1 * Pressure;
-		return  RGas_Water * Temperature * Pi * (Gamma0PiReg2(Tau, Pi) + GammarPiReg2(Tau, Pi)) / (Pressure * 100000.0);
+		return  RGas_Water * Temperature * Pi * (Gamma0PiReg2(Tau, Pi) + GamMtPiReg2(Tau, Pi)) / (Pressure * 100000.0);
 	}
 
 	double PT2DReg2(double  Pressure, double Temperature)
@@ -2167,7 +2167,7 @@ namespace uewasp97
 
 		Tau = 540.0 / Temperature;
 		Pi = 0.1 * Pressure;
-		return  0.001 * RGas_Water * Temperature * (Tau * (Gamma0TauReg2(Tau, Pi) + GammarTauReg2(Tau, Pi)) - Pi * (Gamma0PiReg2(Tau, Pi) + GammarPiReg2(Tau, Pi)));
+		return  0.001 * RGas_Water * Temperature * (Tau * (Gamma0TauReg2(Tau, Pi) + GamMtTauReg2(Tau, Pi)) - Pi * (Gamma0PiReg2(Tau, Pi) + GamMtPiReg2(Tau, Pi)));
 	}
 
 	double PT2SReg2(double  Pressure, double Temperature)
@@ -2176,7 +2176,7 @@ namespace uewasp97
 
 		Tau = 540.0 / Temperature;
 		Pi = 0.1 * Pressure;
-		return  0.001 * RGas_Water * (Tau * (Gamma0TauReg2(Tau, Pi) + GammarTauReg2(Tau, Pi)) - (Gamma0Reg2(Tau, Pi) + GammarReg2(Tau, Pi)));
+		return  0.001 * RGas_Water * (Tau * (Gamma0TauReg2(Tau, Pi) + GamMtTauReg2(Tau, Pi)) - (Gamma0Reg2(Tau, Pi) + GamMtReg2(Tau, Pi)));
 	}
 
 
@@ -2187,7 +2187,7 @@ namespace uewasp97
 
 		Tau = 540.0 / Temperature;
 		Pi = 0.1 * Pressure;
-		return  0.001 * RGas_Water * Temperature * Tau * (Gamma0TauReg2(Tau, Pi) + GammarTauReg2(Tau, Pi));
+		return  0.001 * RGas_Water * Temperature * Tau * (Gamma0TauReg2(Tau, Pi) + GamMtTauReg2(Tau, Pi));
 	}
 
 	double PT2CpReg2(double  Pressure, double Temperature)
@@ -2196,7 +2196,7 @@ namespace uewasp97
 
 		Tau = 540.0 / Temperature;
 		Pi = 0.1 * Pressure;
-		return  -0.001 * RGas_Water * Tau * Tau * (Gamma0TauTauReg2(Tau, Pi) + GammarTauTauReg2(Tau, Pi));
+		return  -0.001 * RGas_Water * Tau * Tau * (Gamma0TauTauReg2(Tau, Pi) + GamMtTauTauReg2(Tau, Pi));
 	}
 
 	double PT2CvReg2(double  Pressure, double Temperature)
@@ -2205,7 +2205,7 @@ namespace uewasp97
 
 		Tau = 540.0 / Temperature;
 		Pi = 0.1 * Pressure;
-		return  0.001 * RGas_Water * (-Tau * Tau * (Gamma0TauTauReg2(Tau, Pi) + GammarTauTauReg2(Tau, Pi)) - pow((1 + Pi * GammarPiReg2(Tau, Pi) - Tau * Pi * GammarPiTauReg2(Tau, Pi)), 2) / (1 - Pi * Pi * GammarPiPiReg2(Tau, Pi)));
+		return  0.001 * RGas_Water * (-Tau * Tau * (Gamma0TauTauReg2(Tau, Pi) + GamMtTauTauReg2(Tau, Pi)) - pow((1 + Pi * GamMtPiReg2(Tau, Pi) - Tau * Pi * GamMtPiTauReg2(Tau, Pi)), 2) / (1 - Pi * Pi * GamMtPiPiReg2(Tau, Pi)));
 	}
 
 	double PT2SSPReg2(double  Pressure, double Temperature)
@@ -2214,7 +2214,7 @@ namespace uewasp97
 
 		Tau = 540.0 / Temperature;
 		Pi = 0.1 * Pressure;
-		return  pow((RGas_Water * Temperature * (1 + 2 * Pi * GammarPiReg2(Tau, Pi) + Pi * Pi * pow(GammarPiReg2(Tau, Pi), 2)) / ((1 - Pi * Pi * GammarPiPiReg2(Tau, Pi)) + pow((1 + Pi * GammarPiReg2(Tau, Pi) - Tau * Pi * GammarPiTauReg2(Tau, Pi)), 2) / (Tau * Tau * (Gamma0TauTauReg2(Tau, Pi) + GammarTauTauReg2(Tau, Pi))))), 0.5);
+		return  pow((RGas_Water * Temperature * (1 + 2 * Pi * GamMtPiReg2(Tau, Pi) + Pi * Pi * pow(GamMtPiReg2(Tau, Pi), 2)) / ((1 - Pi * Pi * GamMtPiPiReg2(Tau, Pi)) + pow((1 + Pi * GamMtPiReg2(Tau, Pi) - Tau * Pi * GamMtPiTauReg2(Tau, Pi)), 2) / (Tau * Tau * (Gamma0TauTauReg2(Tau, Pi) + GamMtTauTauReg2(Tau, Pi))))), 0.5);
 	}
 
 	double T2SGReg42(double  Temperature)
@@ -3128,7 +3128,7 @@ namespace uewasp97
 		Tau = 1000 / Temperature;
 
 		Pi = 0.1 * Pressure;
-		return  RGas_Water * Temperature * Pi * (Gamma0PiReg5(Tau, Pi) + GammarPiReg5(Tau, Pi)) / (Pressure * 100000.0);
+		return  RGas_Water * Temperature * Pi * (Gamma0PiReg5(Tau, Pi) + GamMtPiReg5(Tau, Pi)) / (Pressure * 100000.0);
 	}
 
 
@@ -3141,7 +3141,7 @@ namespace uewasp97
 		Tau = 1000 / Temperature;
 
 		Pi = 0.1 * Pressure;
-		return  0.001 * RGas_Water * Temperature * (Tau * (Gamma0TauReg5(Tau, Pi) + GammarTauReg5(Tau, Pi)) - Pi * (Gamma0PiReg5(Tau, Pi) + GammarPiReg5(Tau, Pi)));
+		return  0.001 * RGas_Water * Temperature * (Tau * (Gamma0TauReg5(Tau, Pi) + GamMtTauReg5(Tau, Pi)) - Pi * (Gamma0PiReg5(Tau, Pi) + GamMtPiReg5(Tau, Pi)));
 	}
 
 	double PT2SReg5(double  Pressure, double Temperature)
@@ -3152,7 +3152,7 @@ namespace uewasp97
 		Tau = 1000 / Temperature;
 
 		Pi = 0.1 * Pressure;
-		return  0.001 * RGas_Water * (Tau * (Gamma0TauReg5(Tau, Pi) + GammarTauReg5(Tau, Pi)) - (Gamma0Reg5(Tau, Pi) + GammarReg5(Tau, Pi)));
+		return  0.001 * RGas_Water * (Tau * (Gamma0TauReg5(Tau, Pi) + GamMtTauReg5(Tau, Pi)) - (Gamma0Reg5(Tau, Pi) + GamMtReg5(Tau, Pi)));
 	}
 
 	double PT2HReg5(double  Pressure, double Temperature)
@@ -3163,7 +3163,7 @@ namespace uewasp97
 		Tau = 1000 / Temperature;
 
 		Pi = 0.1 * Pressure;
-		return  0.001 * RGas_Water * Temperature * Tau * (Gamma0TauReg5(Tau, Pi) + GammarTauReg5(Tau, Pi));
+		return  0.001 * RGas_Water * Temperature * Tau * (Gamma0TauReg5(Tau, Pi) + GamMtTauReg5(Tau, Pi));
 	}
 
 	double PT2CpReg5(double  Pressure, double Temperature)
@@ -3174,7 +3174,7 @@ namespace uewasp97
 		Tau = 1000 / Temperature;
 
 		Pi = 0.1 * Pressure;
-		return  -0.001 * RGas_Water * Tau * Tau * (Gamma0TauTauReg5(Tau, Pi) + GammarTauTauReg5(Tau, Pi));
+		return  -0.001 * RGas_Water * Tau * Tau * (Gamma0TauTauReg5(Tau, Pi) + GamMtTauTauReg5(Tau, Pi));
 	}
 
 	double PT2CvReg5(double  Pressure, double Temperature)
@@ -3185,7 +3185,7 @@ namespace uewasp97
 		Tau = 1000 / Temperature;
 
 		Pi = 0.1 * Pressure;
-		return  0.001 * RGas_Water * (-Tau * Tau * (Gamma0TauTauReg5(Tau, Pi) + GammarTauTauReg5(Tau, Pi)) - pow((1 + Pi * GammarPiReg5(Tau, Pi) - Tau * Pi * GammarPiTauReg5(Tau, Pi)), 2) / (1 - Pi * Pi * GammarPiPiReg5(Tau, Pi)));
+		return  0.001 * RGas_Water * (-Tau * Tau * (Gamma0TauTauReg5(Tau, Pi) + GamMtTauTauReg5(Tau, Pi)) - pow((1 + Pi * GamMtPiReg5(Tau, Pi) - Tau * Pi * GamMtPiTauReg5(Tau, Pi)), 2) / (1 - Pi * Pi * GamMtPiPiReg5(Tau, Pi)));
 	}
 
 	double PT2SSPReg5(double  Pressure, double Temperature)
@@ -3194,7 +3194,7 @@ namespace uewasp97
 
 		Tau = 1000 / Temperature;
 		Pi = 0.1 * Pressure;
-		return  pow((RGas_Water * Temperature * (1 + 2 * Pi * GammarPiReg5(Tau, Pi) + Pi * Pi * pow(GammarPiReg5(Tau, Pi), 2)) / ((1 - Pi * Pi * GammarPiPiReg5(Tau, Pi)) + pow((1 + Pi * GammarPiReg5(Tau, Pi) - Tau * Pi * GammarPiTauReg5(Tau, Pi)), 2) / (Tau * Tau * (Gamma0TauTauReg5(Tau, Pi) + GammarTauTauReg5(Tau, Pi))))), 0.5);
+		return  pow((RGas_Water * Temperature * (1 + 2 * Pi * GamMtPiReg5(Tau, Pi) + Pi * Pi * pow(GamMtPiReg5(Tau, Pi), 2)) / ((1 - Pi * Pi * GamMtPiPiReg5(Tau, Pi)) + pow((1 + Pi * GamMtPiReg5(Tau, Pi) - Tau * Pi * GamMtPiTauReg5(Tau, Pi)), 2) / (Tau * Tau * (Gamma0TauTauReg5(Tau, Pi) + GamMtTauTauReg5(Tau, Pi))))), 0.5);
 	}
 
 

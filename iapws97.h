@@ -1,13 +1,10 @@
 ﻿#pragma once
-
 #include <xlw/MyContainers.h>
 #include <xlw/CellMatrix.h>
 #include <xlw/DoubleOrNothing.h>
 #include <xlw/ArgList.h>  
-
 using namespace xlw;
-
-//<xlw:libraryname=IThermal_IPAWS97
+//<xlw:libraryname=IThermal_IAPWS97
 
 
 double // kJ/kg

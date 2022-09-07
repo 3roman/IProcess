@@ -2,8 +2,9 @@
 <Project  xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
   <ItemGroup>
-    <XLWInterface Include="iapws97.h" />
+    <XLWInterface Include="boiler.h" />
     <XLWInterface Include="coal.h" />
+    <XLWInterface Include="iapws97.h" />
     <XLWInterface Include="steamTurbine.h" />
     <XLWInterface Include="utils.h" />
   </ItemGroup>

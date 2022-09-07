@@ -24,6 +24,7 @@
     <None Include="xlwInterfaceDef.props" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="boiler.cpp" />
     <ClCompile Include="coal.cpp" />
     <ClCompile Include="iapws97.cpp" />
     <ClCompile Include="steamTurbine.cpp" />
@@ -31,6 +32,7 @@
     <ClCompile Include="utils.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="boiler.h" />
     <ClInclude Include="coal.h" />
     <ClInclude Include="iapws97.h" />
     <ClInclude Include="steamTurbine.h" />
