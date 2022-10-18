@@ -34,7 +34,7 @@ double arBase2dBase(double Mt)
 {
 	return 100 / (100 - Mt);
 }
-
+//
 double arBase2dafBase(double Aar, double Mt)
 {
 	return 100 / (100 - Mt - Aar);
