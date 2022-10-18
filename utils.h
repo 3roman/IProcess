@@ -3,7 +3,7 @@
 using namespace xlw;
 
 //<xlw:libraryname=IThermal_Utils
-
+//
 double
 LinearInterpolation(
 	const MyArray& xs,
