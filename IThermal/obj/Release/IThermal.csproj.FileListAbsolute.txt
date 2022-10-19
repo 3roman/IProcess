@@ -1,7 +1,0 @@
-D:\IThermal\IThermal\bin\Release\IThermal.dll
-D:\IThermal\IThermal\bin\Release\IThermal.pdb
-D:\IThermal\IThermal\obj\Release\IThermal.csproj.AssemblyReference.cache
-D:\IThermal\IThermal\obj\Release\IThermal.csproj.CoreCompileInputs.cache
-D:\IThermal\IThermal\obj\Release\IThermal.csproj.Fody.CopyLocal.cache
-D:\IThermal\IThermal\obj\Release\IThermal.dll
-D:\IThermal\IThermal\obj\Release\IThermal.pdb
