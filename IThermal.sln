@@ -3,29 +3,29 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32630.194
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IThermal", "IThermal.vcxproj", "{F5157C62-538C-4DA1-BD6B-F70D6C17AB5B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IThermal", "IThermal\IThermal.csproj", "{EC569543-E7B8-4670-92EE-7405A3C001A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IThermalTests", "IThermalTests\IThermalTests.csproj", "{EDBDC60D-1D39-49D1-8BC9-96F7DC73B0F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|x64 = Debug|x64
-		Debug|x86 = Debug|x86
-		Release|x64 = Release|x64
-		Release|x86 = Release|x86
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F5157C62-538C-4DA1-BD6B-F70D6C17AB5B}.Debug|x64.ActiveCfg = Debug|x64
-		{F5157C62-538C-4DA1-BD6B-F70D6C17AB5B}.Debug|x64.Build.0 = Debug|x64
-		{F5157C62-538C-4DA1-BD6B-F70D6C17AB5B}.Debug|x86.ActiveCfg = Debug|Win32
-		{F5157C62-538C-4DA1-BD6B-F70D6C17AB5B}.Debug|x86.Build.0 = Debug|Win32
-		{F5157C62-538C-4DA1-BD6B-F70D6C17AB5B}.Release|x64.ActiveCfg = Release|x64
-		{F5157C62-538C-4DA1-BD6B-F70D6C17AB5B}.Release|x64.Build.0 = Release|x64
-		{F5157C62-538C-4DA1-BD6B-F70D6C17AB5B}.Release|x86.ActiveCfg = Release|Win32
-		{F5157C62-538C-4DA1-BD6B-F70D6C17AB5B}.Release|x86.Build.0 = Release|Win32
+		{EC569543-E7B8-4670-92EE-7405A3C001A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC569543-E7B8-4670-92EE-7405A3C001A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC569543-E7B8-4670-92EE-7405A3C001A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC569543-E7B8-4670-92EE-7405A3C001A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDBDC60D-1D39-49D1-8BC9-96F7DC73B0F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDBDC60D-1D39-49D1-8BC9-96F7DC73B0F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDBDC60D-1D39-49D1-8BC9-96F7DC73B0F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDBDC60D-1D39-49D1-8BC9-96F7DC73B0F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {D1880ED7-C64D-4B92-BC9D-DC1004FD322B}
+		SolutionGuid = {33BD0104-B035-4A74-9D9E-F6530B380A75}
 	EndGlobalSection
 EndGlobal

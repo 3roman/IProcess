@@ -1,0 +1,16 @@
+D:\IThermal\IThermalTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\IThermal\IThermalTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\IThermal\IThermalTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\IThermal\IThermalTests\bin\Debug\IThermalTests.dll
+D:\IThermal\IThermalTests\bin\Debug\IThermalTests.pdb
+D:\IThermal\IThermalTests\bin\Debug\IThermal.dll
+D:\IThermal\IThermalTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+D:\IThermal\IThermalTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+D:\IThermal\IThermalTests\bin\Debug\IThermal.pdb
+D:\IThermal\IThermalTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+D:\IThermal\IThermalTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+D:\IThermal\IThermalTests\obj\Debug\IThermalTests.csproj.AssemblyReference.cache
+D:\IThermal\IThermalTests\obj\Debug\IThermalTests.csproj.CoreCompileInputs.cache
+D:\IThermal\IThermalTests\obj\Debug\IThermalTests.csproj.CopyComplete
+D:\IThermal\IThermalTests\obj\Debug\IThermalTests.dll
+D:\IThermal\IThermalTests\obj\Debug\IThermalTests.pdb

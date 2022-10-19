@@ -1,0 +1,7 @@
+D:\IThermal\IThermal\bin\Debug\IThermal.dll
+D:\IThermal\IThermal\bin\Debug\IThermal.pdb
+D:\IThermal\IThermal\obj\Debug\IThermal.csproj.AssemblyReference.cache
+D:\IThermal\IThermal\obj\Debug\IThermal.csproj.CoreCompileInputs.cache
+D:\IThermal\IThermal\obj\Debug\IThermal.csproj.Fody.CopyLocal.cache
+D:\IThermal\IThermal\obj\Debug\IThermal.dll
+D:\IThermal\IThermal\obj\Debug\IThermal.pdb
