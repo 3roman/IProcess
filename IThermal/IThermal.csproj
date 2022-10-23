@@ -61,6 +61,7 @@
     <None Include="IThermal-AddIn.dna" />
     <None Include="packages.config" />
     <None Include="Properties\ExcelDna.Build.props" />
+    <Compile Include="UEwasp.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="FodyWeavers.xml" />
