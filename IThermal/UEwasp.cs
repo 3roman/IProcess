@@ -125,5 +125,52 @@ namespace IThermal
 		public static extern void T2VG(double T, ref double V, ref int zone);
 		[DllImport("UEwasp.dll", CallingConvention = CallingConvention.StdCall)]
 		public static extern void T2VL(double T, ref double V, ref int zone);
+
+
+		[DllImport("UEwasp.dll", CallingConvention = CallingConvention.StdCall)]
+		public static extern void PT2H(double p, double t, ref double h, ref int z);
+		[DllImport("UEwasp.dll", CallingConvention = CallingConvention.StdCall)]
+		public static extern void PT2S(double p, double t, ref double s, ref int z);
+		[DllImport("UEwasp.dll", CallingConvention = CallingConvention.StdCall)]
+		public static extern void PT2V(double p, double t, ref double v, ref int z);
+		[DllImport("UEwasp.dll", CallingConvention = CallingConvention.StdCall)]
+		public static extern void PT2CP(double p, double t, ref double cp, ref int z);
+		[DllImport("UEwasp.dll", CallingConvention = CallingConvention.StdCall)]
+		public static extern void PT2CV(double p, double t, ref double cv, ref int z);
+		[DllImport("UEwasp.dll", CallingConvention = CallingConvention.StdCall)]
+		public static extern void PT2KS(double p, double t, ref double ks, ref int z);
+		[DllImport("UEwasp.dll", CallingConvention = CallingConvention.StdCall)]
+		public static extern void PT2ETA(double p, double t, ref double eta, ref int z);
+		[DllImport("UEwasp.dll", CallingConvention = CallingConvention.StdCall)]
+		public static extern void PT2X(double p, double t, ref double x, ref int z);
+
+
+		[DllImport("UEwasp.dll", CallingConvention = CallingConvention.StdCall)]
+		public static extern void PH2T(double p, double h, ref double t, ref int z);
+		[DllImport("UEwasp.dll", CallingConvention = CallingConvention.StdCall)]
+		public static extern void PH2S(double p, double h, ref double s, ref int z);
+		[DllImport("UEwasp.dll", CallingConvention = CallingConvention.StdCall)]
+		public static extern void PH2V(double p, double h, ref double v, ref int z);
+		[DllImport("UEwasp.dll", CallingConvention = CallingConvention.StdCall)]
+		public static extern void PH2X(double p, double h, ref double x, ref int z);
+
+
+		[DllImport("UEwasp.dll", CallingConvention = CallingConvention.StdCall)]
+		public static extern void PS2T(double p, double s, ref double t, ref int z);
+		[DllImport("UEwasp.dll", CallingConvention = CallingConvention.StdCall)]
+		public static extern void PS2H(double p, double s, ref double h, ref int z);
+		[DllImport("UEwasp.dll", CallingConvention = CallingConvention.StdCall)]
+		public static extern void PS2V(double p, double s, ref double v, ref int z);
+		[DllImport("UEwasp.dll", CallingConvention = CallingConvention.StdCall)]
+		public static extern void PS2X(double p, double s, ref double x, ref int z);
+
+		[DllImport("UEwasp.dll", CallingConvention = CallingConvention.StdCall)]
+		public static extern void HS2P(double h, double s, ref double p, ref int z);
+		[DllImport("UEwasp.dll", CallingConvention = CallingConvention.StdCall)]
+		public static extern void HS2T(double h, double s, ref double t, ref int z);
+		[DllImport("UEwasp.dll", CallingConvention = CallingConvention.StdCall)]
+		public static extern void HS2V(double h, double s, ref double v, ref int z);
+		[DllImport("UEwasp.dll", CallingConvention = CallingConvention.StdCall)]
+		public static extern void HS2X(double h, double s, ref double x, ref int z);
 	}
 }

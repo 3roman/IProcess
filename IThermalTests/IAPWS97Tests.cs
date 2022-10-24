@@ -219,5 +219,154 @@ namespace IThermal.Tests
             Assert.AreEqual(expection, IAPWS97.T2ETAG(input1), delta);
         }
 
+        [TestMethod()]
+        [DataRow(5, 500, 300)]
+        public void T2ETAGTEST(double expection, double input1, double input2)
+        {
+            Assert.AreEqual(expection, IAPWS97.T2ETAG(input1), delta);
+        }
+
+        [TestMethod()]
+        [DataRow(3434.476096638799, 5, 500)]
+        public void PT2HTEST(double expection, double input1, double input2)
+        {
+            Assert.AreEqual(expection, IAPWS97.PT2H(input1, input2), delta);
+        }
+
+        [TestMethod()]
+        [DataRow(6.977803603653, 5, 500)]
+        public void PT2STEST(double expection, double input1, double input2)
+        {
+            Assert.AreEqual(expection, IAPWS97.PT2S(input1, input2), delta);
+        }
+
+        [TestMethod()]
+        [DataRow(0.068582919318, 5, 500)]
+        public void PT2VTEST(double expection, double input1, double input2)
+        {
+            Assert.AreEqual(expection, IAPWS97.PT2V(input1, input2), delta);
+        }
+
+        [TestMethod()]
+        [DataRow(2.332985846968, 5, 500)]
+        public void PT2CPTEST(double expection, double input1, double input2)
+        {
+            Assert.AreEqual(expection, IAPWS97.PT2CP(input1, input2), delta);
+        }
+
+        [TestMethod()]
+        [DataRow(1.753336897432, 5, 500)]
+        public void PT2CVTEST(double expection, double input1, double input2)
+        {
+            Assert.AreEqual(expection, IAPWS97.PT2CV(input1, input2), delta);
+        }
+
+        [TestMethod()]
+        [DataRow(1.277207885609, 5, 500)]
+        public void PT2KSTEST(double expection, double input1, double input2)
+        {
+            Assert.AreEqual(expection, IAPWS97.PT2KS(input1, input2), delta);
+        }
+
+        [TestMethod()]
+        [DataRow(2.868066e-005, 5, 500)]
+        public void PT2ETATEST(double expection, double input1, double input2)
+        {
+            Assert.AreEqual(expection, IAPWS97.PT2ETA(input1, input2), delta);
+        }
+
+        [TestMethod()]
+        [DataRow(1, 5, 500)]
+        public void PT2XTEST(double expection, double input1, double input2)
+        {
+            Assert.AreEqual(expection, IAPWS97.PT2X(input1, input2), delta);
+        }
+
+        [TestMethod()]
+        [DataRow(528.146198265104, 5, 3500)]
+        public void PH2TTEST(double expection, double input1, double input2)
+        {
+            Assert.AreEqual(expection, IAPWS97.PH2T(input1, input2), delta);
+        }
+
+        [TestMethod()]
+        [DataRow(7.061047496013, 5, 3500)]
+        public void PH2STEST(double expection, double input1, double input2)
+        {
+            Assert.AreEqual(expection, IAPWS97.PH2S(input1, input2), delta);
+        }
+
+        [TestMethod()]
+        [DataRow(0.071474841913, 5, 3500)]
+        public void PH2VTEST(double expection, double input1, double input2)
+        {
+            Assert.AreEqual(expection, IAPWS97.PH2V(input1, input2), delta);
+        }
+
+        [TestMethod()]
+        [DataRow(-1, 5, 3500 )]
+        public void PH2XTEST(double expection, double input1, double input2)
+        {
+            Assert.AreEqual(expection, IAPWS97.PH2X(input1, input2), delta);
+        }
+
+
+        [TestMethod()]
+        [DataRow(918.38917075266, 5, 8)]
+        public void PS2TTEST(double expection, double input1, double input2)
+        {
+            Assert.AreEqual(expection, IAPWS97.PS2T(input1, input2), delta);
+        }
+
+        [TestMethod()]
+        [DataRow(4425.403200544131, 5, 8)]
+        public void PS2HTEST(double expection, double input1, double input2)
+        {
+            Assert.AreEqual(expection, IAPWS97.PS2H(input1, input2), delta);
+        }
+
+        [TestMethod()]
+        [DataRow(0.10942629644, 5, 8)]
+        public void PS2VTEST(double expection, double input1, double input2)
+        {
+            Assert.AreEqual(expection, IAPWS97.PS2V(input1, input2), delta);
+        }
+
+        [TestMethod()]
+        [DataRow(-1, 5, 8)]
+        public void PS2XTEST(double expection, double input1, double input2)
+        {
+            Assert.AreEqual(expection, IAPWS97.PS2X(input1, input2), delta);
+        }
+
+
+        [TestMethod()]
+        [DataRow(0.634053738355, 3500, 8)]
+        public void HS2PTEST(double expection, double input1, double input2)
+        {
+            Assert.AreEqual(expection, IAPWS97.HS2P(input1, input2), delta);
+        }
+
+        [TestMethod()]
+        [DataRow(507.899910238862, 3500, 8)]
+        public void HS2TTEST(double expection, double input1, double input2)
+        {
+            Assert.AreEqual(expection, IAPWS97.HS2T(input1, input2), delta);
+        }
+
+        [TestMethod()]
+        [DataRow(0.565892175197, 3500, 8)]
+        public void HS2VTEST(double expection, double input1, double input2)
+        {
+            Assert.AreEqual(expection, IAPWS97.HS2V(input1, input2), delta);
+        }
+
+        [TestMethod()]
+        [DataRow(-1, 3500, 8)]
+        public void HS2XTEST(double expection, double input1, double input2)
+        {
+            Assert.AreEqual(expection, IAPWS97.HS2X(input1, input2), delta);
+        }
+
     }
 }
