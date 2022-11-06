@@ -246,7 +246,7 @@ namespace IThermal
         {
             return Dispatcher(UEwasp.PT2ETA, p, t);
         }
-        [ExcelFunction(Category = "IThermal_IAPWS97", Description = "solve for dryness friction\n[0~1/-1]")]
+        [ExcelFunction(Category = "IThermal_IAPWS97", Description = "solve for dryness friction\n(0~1/-1)")]
         public static double PT2X97([ExcelArgument(Name = "P", Description = "pressure\nMPaA")] double p, [ExcelArgument(Name = "T", Description = "temperature\n℃")] double t)
         {
             return Dispatcher(UEwasp.PT2X, p, t);
@@ -270,7 +270,7 @@ namespace IThermal
             return Dispatcher(UEwasp.PH2V, p, h);
         }
 
-        [ExcelFunction(Category = "IThermal_IAPWS97", Description = "solve for dryness friction\n[0~1/-1]")]
+        [ExcelFunction(Category = "IThermal_IAPWS97", Description = "solve for dryness friction\n((0~1/-1)/-1])")]
         public static double PH2X97([ExcelArgument(Name = "P", Description = "pressure\nMPaA")] double p, [ExcelArgument(Name = "H", Description = "enthalpy\nkJ/kg")] double h)
         {
             return Dispatcher(UEwasp.PH2X, p, h);
@@ -295,7 +295,7 @@ namespace IThermal
             return Dispatcher(UEwasp.PS2V, p, s);
         }
 
-        [ExcelFunction(Category = "IThermal_IAPWS97", Description = "solve for dryness friction\n[0~1/-1]")]
+        [ExcelFunction(Category = "IThermal_IAPWS97", Description = "solve for dryness friction\n(0~1/-1)")]
         public static double PS2X97([ExcelArgument(Name = "P", Description = "pressure\nMPaA")] double p, [ExcelArgument(Name = "S", Description = "entropy\nkJ/(kg.℃)")] double s)
         {
             return Dispatcher(UEwasp.PS2X, p, s);
@@ -320,7 +320,7 @@ namespace IThermal
             return Dispatcher(UEwasp.PV2S, p, v);
         }
 
-        [ExcelFunction(Category = "IThermal_IAPWS97", Description = "solve for dryness friction\n[0~1/-1]")]
+        [ExcelFunction(Category = "IThermal_IAPWS97", Description = "solve for dryness friction\n(0~1/-1)")]
         public static double PV2X97([ExcelArgument(Name = "P", Description = "pressure\nMPaA")] double p, [ExcelArgument(Name = "V", Description = "specific volume\nm³/kg")] double v)
         {
             return Dispatcher(UEwasp.PV2X, p, v);
@@ -328,25 +328,25 @@ namespace IThermal
 
 
         [ExcelFunction(Category = "IThermal_IAPWS97", Description = "solve for temperature\n℃")]
-        public static double PX2T97([ExcelArgument(Name = "P", Description = "pressure\nMPaA")] double p, [ExcelArgument(Name = "X", Description = "dryness friction\n[0~1])")] double x)
+        public static double PX2T97([ExcelArgument(Name = "P", Description = "pressure\nMPaA")] double p, [ExcelArgument(Name = "X", Description = "dryness friction\n(0~1)")] double x)
         {
             return Dispatcher(UEwasp.PX2T, p, x);
         }
 
         [ExcelFunction(Category = "IThermal_IAPWS97", Description = "solve for enthalpy\nkJ/kg")]
-        public static double PX2H97([ExcelArgument(Name = "P", Description = "pressure\nMPaA")] double p, [ExcelArgument(Name = "X", Description = "dryness friction\n[0~1])")] double x)
+        public static double PX2H97([ExcelArgument(Name = "P", Description = "pressure\nMPaA")] double p, [ExcelArgument(Name = "X", Description = "dryness friction\n(0~1)")] double x)
         {
             return Dispatcher(UEwasp.PX2H, p, x);
         }
 
         [ExcelFunction(Category = "IThermal_IAPWS97", Description = "solve for entropy\nkJ/(kg.℃)")]
-        public static double PX2S97([ExcelArgument(Name = "P", Description = "pressure\nMPaA")] double p, [ExcelArgument(Name = "X", Description = "dryness friction\n[0~1])")] double x)
+        public static double PX2S97([ExcelArgument(Name = "P", Description = "pressure\nMPaA")] double p, [ExcelArgument(Name = "X", Description = "dryness friction\n(0~1)")] double x)
         {
             return Dispatcher(UEwasp.PX2S, p, x);
         }
 
         [ExcelFunction(Category = "IThermal_IAPWS97", Description = "solve for specific volume\nm³/kg")]
-        public static double PX2V97([ExcelArgument(Name = "P", Description = "pressure\nMPaA")] double p, [ExcelArgument(Name = "X", Description = "dryness friction\n[0~1])")] double x)
+        public static double PX2V97([ExcelArgument(Name = "P", Description = "pressure\nMPaA")] double p, [ExcelArgument(Name = "X", Description = "dryness friction\n(0~1)")] double x)
         {
             return Dispatcher(UEwasp.PX2V, p, x);
         }
@@ -370,7 +370,7 @@ namespace IThermal
             return Dispatcher(UEwasp.TH2V, t, h);
         }
 
-        [ExcelFunction(Category = "IThermal_IAPWS97", Description = "solve for dryness friction\n[0~1/-1]")]
+        [ExcelFunction(Category = "IThermal_IAPWS97", Description = "solve for dryness friction\n(0~1/-1)")]
         public static double TH2X97([ExcelArgument(Name = "T", Description = "temperature\n℃")] double t, [ExcelArgument(Name = "H", Description = "enthalpy\nkJ/kg")] double h)
         {
             return Dispatcher(UEwasp.TH2X, t, h);
@@ -395,7 +395,7 @@ namespace IThermal
             return Dispatcher(UEwasp.TS2V, t, s);
         }
 
-        [ExcelFunction(Category = "IThermal_IAPWS97", Description = "solve for dryness friction\n[0~1/-1]")]
+        [ExcelFunction(Category = "IThermal_IAPWS97", Description = "solve for dryness friction\n(0~1/-1)")]
         public static double TS2X97([ExcelArgument(Name = "T", Description = "temperature\n℃")] double t, [ExcelArgument(Name = "S", Description = "entropy\nkJ/(kg.℃)")] double s)
         {
             return Dispatcher(UEwasp.TS2X, t, s);
@@ -420,7 +420,7 @@ namespace IThermal
             return Dispatcher(UEwasp.TV2S, t, v);
         }
 
-        [ExcelFunction(Category = "IThermal_IAPWS97", Description = "solve for dryness friction\n[0~1/-1]")]
+        [ExcelFunction(Category = "IThermal_IAPWS97", Description = "solve for dryness friction\n(0~1/-1)")]
         public static double TV2X97([ExcelArgument(Name = "T", Description = "temperature\n℃")] double t, [ExcelArgument(Name = "V", Description = "specific volume\nm³/kg)")] double v)
         {
             return Dispatcher(UEwasp.TV2X, t, v);
@@ -429,25 +429,25 @@ namespace IThermal
 
 
         [ExcelFunction(Category = "IThermal_IAPWS97", Description = "solve for pressure\nMPaA")]
-        public static double TX2P97([ExcelArgument(Name = "T", Description = "temperature\n℃")] double t, [ExcelArgument(Name = "X", Description = "dryness friction\n[0~1])")] double x)
+        public static double TX2P97([ExcelArgument(Name = "T", Description = "temperature\n℃")] double t, [ExcelArgument(Name = "X", Description = "dryness friction\n(0~1)")] double x)
         {
             return Dispatcher(UEwasp.TX2P, t, x);
         }
 
         [ExcelFunction(Category = "IThermal_IAPWS97", Description = "solve for enthalpy\nkJ/kg")]
-        public static double TX2H97([ExcelArgument(Name = "T", Description = "temperature\n℃")] double t, [ExcelArgument(Name = "X", Description = "dryness friction\n[0~1])")] double x)
+        public static double TX2H97([ExcelArgument(Name = "T", Description = "temperature\n℃")] double t, [ExcelArgument(Name = "X", Description = "dryness friction\n(0~1)")] double x)
         {
             return Dispatcher(UEwasp.TX2H, t, x);
         }
 
         [ExcelFunction(Category = "IThermal_IAPWS97", Description = "solve for entropy\nkJ/(kg.℃)")]
-        public static double TX2S97([ExcelArgument(Name = "T", Description = "temperature\n℃")] double t, [ExcelArgument(Name = "X", Description = "dryness friction\n[0~1])")] double x)
+        public static double TX2S97([ExcelArgument(Name = "T", Description = "temperature\n℃")] double t, [ExcelArgument(Name = "X", Description = "dryness friction\n(0~1)")] double x)
         {
             return Dispatcher(UEwasp.TX2S, t, x);
         }
 
         [ExcelFunction(Category = "IThermal_IAPWS97", Description = "solve for specific volume\nm³/kg")]
-        public static double TX2V97([ExcelArgument(Name = "T", Description = "temperature\n℃")] double t, [ExcelArgument(Name = "X", Description = "dryness friction\n[0~1])")] double x)
+        public static double TX2V97([ExcelArgument(Name = "T", Description = "temperature\n℃")] double t, [ExcelArgument(Name = "X", Description = "dryness friction\n(0~1)")] double x)
         { 
             return Dispatcher(UEwasp.TX2V, t, x);
         }
@@ -471,7 +471,7 @@ namespace IThermal
             return Dispatcher(UEwasp.HS2V, h, s);
         }
 
-        [ExcelFunction(Category = "IThermal_IAPWS97", Description = "solve for dryness friction\n[0~1/-1]")]
+        [ExcelFunction(Category = "IThermal_IAPWS97", Description = "solve for dryness friction\n(0~1/-1)")]
         public static double HS2X97([ExcelArgument(Name = "H", Description = "enthalpy\nkJ/kg")] double h, [ExcelArgument(Name = "S", Description = "entropy\nkJ/(kg.℃)")] double s)
         {
             return Dispatcher(UEwasp.HS2X, h, s);
