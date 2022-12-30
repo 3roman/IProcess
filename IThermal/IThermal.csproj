@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="IAPWS97.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Condenser.cs" />
     <Compile Include="Utility.cs" />
   </ItemGroup>
   <ItemGroup>
