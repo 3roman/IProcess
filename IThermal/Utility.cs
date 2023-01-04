@@ -79,5 +79,22 @@ namespace IThermal
             // Debug.WriteLine(f * f);
             return f * f;
         }
+
+        [ExcelFunction(Category = "IThermal_Utility", Description = "calculate primary steam flowrate for letdown station")]
+        public static object LetdownStation(
+            [ExcelArgument(Name = "p1", Description = "primary steam pressure\nMPaA")] double p1,
+            [ExcelArgument(Name = "t1", Description = "primary steam temperature\n℃")] double t1,
+            [ExcelArgument(Name = "p2", Description = "secondary steam pressure\nMPaA")] double p2,
+            [ExcelArgument(Name = "t2", Description = "secondary steam temperature\n℃")] double t2,
+            [ExcelArgument(Name = "p3", Description = "desuperheated water pressure\nMPaA")] double p3,
+            [ExcelArgument(Name = "t3", Description = "desuperheated water temperature\n℃")] double t3,
+            [ExcelArgument(Name = "f2", Description = "secondary steam flowrate\nkg/h")] double f2)
+        {
+            double h1 = IAPWS97.PT2H97(p1, t1);
+            double h2 = IAPWS97.PT2H97(p2, t2);
+            double h3 = IAPWS97.PT2H97(p3, t3);
+
+            return f2 * (h2 - h3) / (h1 - h3);
+        }
     }
 }

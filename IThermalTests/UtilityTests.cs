@@ -44,5 +44,11 @@ namespace IThermalTests
             Assert.Equal(6, (double)Utility.LinearInterpolation(xs, ys, 5.5), 1e-5);
             Assert.Equal(4.55, (double)Utility.LinearInterpolation(xs, ys, 1.5), 1e-5);
         }
+
+        [Fact]
+        public void LetdownStationTest()
+        {
+            Assert.Equal(1697.030373, (double)Utility.LetdownStation(4, 400, 2, 222.4, 3, 158, 2000), 1e-5); 
+        }
     }
 }
