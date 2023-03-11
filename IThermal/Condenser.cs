@@ -18,8 +18,8 @@ namespace IThermal
             return pk;
         }
 
-        [ExcelFunction(Category = "IThermal_Condenser", Description = "solve for condensation water temperature\n℃")]
-        public static double CondensationWaterTemperature(
+        [ExcelFunction(Category = "IThermal_Condenser", Description = "solve for condensate temperature\n℃")]
+        public static double CondensateTemperature(
             [ExcelArgument(Name = "pc", Description = "condenser pressure\nMPaA")] double pc,
             [ExcelArgument(Name = "Δt", Description = "condensate depression[≤3]\n℃")] double Δt
             )
