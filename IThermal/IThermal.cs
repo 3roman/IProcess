@@ -7,10 +7,7 @@ namespace IThermal
 {
     class IThermal : IExcelAddIn
     {
-        public static DataTable freeze_protecion = new DataTable();
-        public static DataTable heat_conversation = new DataTable();
-        public static DataTable heat_tracing = new DataTable();
-        public static DataTable personnel_protection = new DataTable();
+        public static DataSet AP_STD = new DataSet();
 
         public void AutoClose()
         {
@@ -24,14 +21,13 @@ namespace IThermal
             try
             {
                 connection.Open();
-                MySqlCommand cmd = new MySqlCommand("SELECT * FROM freeze_protecion", connection);
-                freeze_protecion.Load(cmd.ExecuteReader());
-                cmd.CommandText = "SELECT * FROM heat_conversation";
-                heat_conversation.Load(cmd.ExecuteReader());
-                cmd.CommandText = "SELECT * FROM heat_tracing";
-                heat_tracing.Load(cmd.ExecuteReader());
-                cmd.CommandText = "SELECT * FROM personnel_protection";
-                personnel_protection.Load(cmd.ExecuteReader());
+                MySqlDataAdapter apt = new MySqlDataAdapter(string.Empty, connection);
+                apt.SelectCommand.CommandText = "SELECT * FROM heat_conversation";
+                apt.Fill(AP_STD, "heat_conversation");
+                apt.SelectCommand.CommandText = "SELECT * FROM personnel_protection";
+                apt.Fill(AP_STD, "personnel_protection");
+                apt.SelectCommand.CommandText = "SELECT * FROM freeze_protection";
+                apt.Fill(AP_STD, "freeze_protection");
             }
             catch
             {
