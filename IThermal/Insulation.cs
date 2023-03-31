@@ -58,13 +58,21 @@ namespace IThermal
             return $"{designator}-{insulationThickness}";
         }
 
-        [ExcelFunction(Category = "IThermal_Insulation", Description = "solve for insulation for freeze protection purpose")]
-        public static object Insulation4FreezeProtecion(
-                        [ExcelArgument(Name = "FluidType", Description = @"1:high temperature wet gas/warm process liquid 2:low temperature wet gas/cool process liquid 5:utility water")] int fluidType,
-            [ExcelArgument(Name = "DN", Description = "DN\nmm")] int DN
+        [ExcelFunction(Category = "IThermal_Insulation", Description = "solve for insulation for winterization purpose")]
+        public static object Insulation4Winterization(
+            [ExcelArgument(Name = "DN", Description = "DN\nmm")] int DN,
+                        [ExcelArgument(Name = "FluidType", Description = @"1:high temp wet gas 2:warm process liquid 3:low temp wet gas 4:cold process liquid 5:utility water")] int fluidType
             )
         {
-            var freezeProtecionTable = IThermal.AP_STD.Tables["freeze_protection"].AsEnumerable();
+            if (fluidType == 1)
+            {
+                fluidType = 3;
+            }
+            if (fluidType == 2)
+            {
+                fluidType = 4;
+            }
+            var freezeProtecionTable = IThermal.AP_STD.Tables["winterization"].AsEnumerable();
             var insulationThickness = freezeProtecionTable
                                 .Where(row => row.Field<int>("fluid_type") == fluidType && row.Field<int>("dn") == DN)
                                 .Select(row => row.Field<int>("insulation_thickness"))

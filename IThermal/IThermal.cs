@@ -26,8 +26,8 @@ namespace IThermal
                 apt.Fill(AP_STD, "heat_conversation");
                 apt.SelectCommand.CommandText = "SELECT * FROM personnel_protection";
                 apt.Fill(AP_STD, "personnel_protection");
-                apt.SelectCommand.CommandText = "SELECT * FROM freeze_protection";
-                apt.Fill(AP_STD, "freeze_protection");
+                apt.SelectCommand.CommandText = "SELECT * FROM winterization";
+                apt.Fill(AP_STD, "winterization");
             }
             catch
             {
