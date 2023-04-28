@@ -1,19 +1,11 @@
 ﻿using ExcelDna.Integration;
+using Process.Utility;
 using System;
 
-namespace Process
+namespace Process.ProcessSystemEngineer
 {
-    public class ProcessSystemEngineer
+    public class ThermalInsulation
     {
-        [ExcelFunction(Category = "IProcessSystemEngineer", Description = "Convert NPS to DN")]
-        public static object NPS2DN(
-            [ExcelArgument(Name = "NPS", Description = "inch[\"1/2\",\"1-1/2\",3...]")] string nps)
-        {
-            string sql = $"SELECT dn FROM nps2dn WHERE nps={nps}";
-
-            return SQLiteHelper.ExecuteScalar(sql);
-        }
-
         [ExcelFunction(Category = "IProcessSystemEngineer", Description = "Insulation of F2/F3 Designator")]
         public static object InsulationofFDesignator(
             [ExcelArgument(Name = "DN", Description = "Norminal Diameter of Pipe\nmm\n-1 denotes vessel")] int dn,
@@ -57,6 +49,7 @@ namespace Process
             }
             string desigator = "";
             if (dt >= 0 && dt <= 230)
+
             {
                 desigator = "F3";
             }

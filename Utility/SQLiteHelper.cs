@@ -1,8 +1,6 @@
-﻿
+﻿using System.Data.SQLite;
 
-using System.Data.SQLite;
-
-namespace Process
+namespace Process.Utility
 {
     class SQLiteHelper
     {
