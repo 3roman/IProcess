@@ -5,11 +5,11 @@ namespace Process.ThermalEngineer
     public class Turbine
     {
         [ExcelFunction(Category = "IThermalEngineer", Description = "solve for steam rate of a steam turbine\nkg/kW.h")]
-        public static double SteamRate1(
-            [ExcelArgument(Name = "Pi", Description = "inlet steam pressure\nbarA")] double Pi,
+        public static double SteamRatebyTurbineEfficiency(
+            [ExcelArgument(Name = "Pi", Description = "inlet steam pressure\nbara")] double Pi,
             [ExcelArgument(Name = "Ti", Description = "inlet steam temperature\n℃")] double Ti,
-            [ExcelArgument(Name = "Pe", Description = "exhaust steam pressure\nbarA")] double Pe,
-            [ExcelArgument(Name = "eta", Description = "relative internal efficiency of steam turbine\n(0~100)")] double eta)
+            [ExcelArgument(Name = "Pe", Description = "exhaust steam pressure\nbara")] double Pe,
+            [ExcelArgument(Name = "eta", Description = "turbine efficiency\n(0~100)")] double eta)
         {
             double inletEnthalpy = IAPWS97.PT2H97(Pi, Ti);
             double inletEntropy = IAPWS97.PT2S97(Pi, Ti);
@@ -21,11 +21,11 @@ namespace Process.ThermalEngineer
         }
 
         [ExcelFunction(Category = "IThermalEngineer", Description = "solve for steam rate of a steam turbine\nkg/kW.h")]
-        public static double SteamRate2(
-            [ExcelArgument(Name = "Pi", Description = "inlet steam pressure\nbarA")] double Pi,
+        public static double SteamRatebyExhaustSteamDryness(
+            [ExcelArgument(Name = "Pi", Description = "inlet steam pressure\nbara")] double Pi,
             [ExcelArgument(Name = "Ti", Description = "inlet steam temperature\n℃")] double Ti,
-            [ExcelArgument(Name = "Pe", Description = "exhaust steam pressure\nbarA")] double Pe,
-            [ExcelArgument(Name = "Xe", Description = "exhaust dryness fraction\n(0~1)")] double Xe)
+            [ExcelArgument(Name = "Pe", Description = "exhaust steam pressure\nbara")] double Pe,
+            [ExcelArgument(Name = "Xe", Description = "exhaust steam dryness fraction\n(0~1)")] double Xe)
         {
             double inletEnthalpy = IAPWS97.PT2H97(Pi, Ti);
             double exhaustEnthalpy = IAPWS97.PX2H97(Pe, Xe);
@@ -34,12 +34,12 @@ namespace Process.ThermalEngineer
             return 3600 / (inletEnthalpy - exhaustEnthalpy);
         }
 
-        [ExcelFunction(Category = "IThermalEngineer", Description = "solve for exhaust temperaturen\n℃")]
-        public static double ExhaustTemperature(
-            [ExcelArgument(Name = "Pi", Description = "inlet steam pressure\nbarA")] double Pi,
+        [ExcelFunction(Category = "IThermalEngineer", Description = "solve for exhaust steam temperaturen\n℃")]
+        public static double ExhaustSteamTemperaturebyTurbineEfficiency(
+            [ExcelArgument(Name = "Pi", Description = "inlet steam pressure\nbara")] double Pi,
             [ExcelArgument(Name = "Ti", Description = "inlet steam temperature\n℃")] double Ti,
-            [ExcelArgument(Name = "Pe", Description = "exhaust steam pressure\nbarA")] double Pe,
-            [ExcelArgument(Name = "eta", Description = "relative internal efficiency of steam turbine\n(0~100)")] double eta)
+            [ExcelArgument(Name = "Pe", Description = "exhaust steam pressure\nbara")] double Pe,
+            [ExcelArgument(Name = "eta", Description = "turbine efficiency\n(0~100)")] double eta)
         {
             double inletEnthalpy = IAPWS97.PT2H97(Pi, Ti);
             double inletEntropy = IAPWS97.PT2S97(Pi, Ti);
@@ -51,11 +51,11 @@ namespace Process.ThermalEngineer
         }
 
         [ExcelFunction(Category = "IThermalEngineer", Description = "solve for exhaust dryness fraction\n(0~1)")]
-        public static double ExhaustDrynessFraction(
-            [ExcelArgument(Name = "Pi", Description = "inlet steam pressure\nbarA")] double Pi,
+        public static double ExhaustSteamDrynessbyTurbineEfficiency(
+            [ExcelArgument(Name = "Pi", Description = "inlet steam pressure\nbara")] double Pi,
             [ExcelArgument(Name = "Ti", Description = "inlet steam temperature\n℃")] double Ti,
-            [ExcelArgument(Name = "Pe", Description = "exhaust steam pressure\nbarA")] double Pe,
-            [ExcelArgument(Name = "eta", Description = "relative internal efficiency of steam turbine\n(0~100)")] double eta)
+            [ExcelArgument(Name = "Pe", Description = "exhaust steam pressure\nbara")] double Pe,
+            [ExcelArgument(Name = "eta", Description = "turbine efficiency\n(0~100)")] double eta)
         {
             double inletEnthalpy = IAPWS97.PT2H97(Pi, Ti);
             double inletEntropy = IAPWS97.PT2S97(Pi, Ti);
